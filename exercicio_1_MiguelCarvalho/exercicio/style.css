@@ -26,6 +26,7 @@ body{
 }
 
 .nav_button{
+    margin-top:15px;
     padding: 5px 20px;
     background-color: #a97a3c;
     color: white;
@@ -34,4 +35,68 @@ body{
     align-items: center;
     text-align: center;
 }
+
+.card{
+    background-color:white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    align-items:left;
+    flex: 1 1 auto;
+
+    margin: 16px;
+
+    
+}
+.card-body {
+    margin-left: 10px;
+}
+
+
+#itens{
+    background-color: rgb(213, 53, 53);
+    margin: 10px;
+    
+    
+    
+}
+.item{
+    width: 50%;
+    display: flex;
+    padding:1%;
+    float: left;
+    background-color: aliceblue;
+}
+.item .item-img{
+width: 30%;
+background-color:green;
+height: 100%;
+display: flex;
+margin: 1%;
+}
+
+.item .item-info{
+    text-align: left;
+    padding-left:10px;
+    width: 70%;
+    margin: auto;
+    color: black;
+    }
+
+    .br-small{
+        border-radius: 12px;
+    }
+    .item-info .info-h1{
+        color: orange;
+        text-decoration: underline;
+    }
+
+    .item .item-info .info-category{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+
 
