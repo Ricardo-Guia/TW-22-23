@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #bb9f80;
+    color: #fff;
+}
+.menu-head h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+}
+
+.header{
+    text-align: center;
+}
+.container{
+    text-align: center;
+    width: 100%;
+    padding: 20px 30%;
+}
+
+.nav_button{
+    margin-top:15px;
+    padding: 5px 20px;
+    background-color: #a97a3c;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.card{
+    background-color:white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    align-items:left;
+    flex: 1 1 auto;
+
+    margin: 16px;
+
+    
+}
+.card-body {
+    margin-left: 10px;
+}
+
+
+#itens{
+    background-color: rgb(213, 53, 53);
+    margin: 10px;
+    
+    
+    
+}
+.item{
+    width: 50%;
+    display: flex;
+    padding:1%;
+    float: left;
+    background-color: aliceblue;
+}
+.item .item-img{
+width: 30%;
+background-color:green;
+height: 100%;
+display: flex;
+margin: 1%;
+}
+
+.item .item-info{
+    text-align: left;
+    padding-left:10px;
+    width: 70%;
+    margin: auto;
+    color: black;
+    }
+
+    .br-small{
+        border-radius: 12px;
+    }
+    .item-info .info-h1{
+        color: orange;
+        text-decoration: underline;
+    }
+
+    .item .item-info .info-category{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+
+
