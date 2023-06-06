@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Gaminiac</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image" href="assets/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/logo.png" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Api's</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Regions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Sobre mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Bem Vindo ao Gaminiac!</div>
+                <div class="masthead-heading text-uppercase">Vê os teus stats e ouve as melhores playlists</div>
+
+            </div>
+            
+        </header>
+        <!-- Api LoL-->
+        <section class="page-section bg-light" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">API LOL</h2>
+                    <h3 class="section-subheading text-muted">Stats de D3z</h3>
+
+                    <label for="summonerName">Summoner Name:</label>
+                    <input type="text" id="summoner-name" name="summonerName">
+                    <button id="submit-button">Submit</button>
+                    <table id="league-data-container">
+                    </table>
+                </div>
+                </div>
+        </section>
+
+        <!-- Api Fortnite-->
+    <section class="page-section bg-light" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">API Fortnite</h2>
+                <h3 class="section-subheading text-muted">Vê os teus stats no Fortnite</h3>
+
+                <form id="statsForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your username"></input>
+                    <label for="platform">Platform:</label>
+                    <select id="platform" name="platform">
+                      <option value="psn">PSN</option>
+                      <option value="xbl">Xbox Live</option>
+                      <option value="epic">epic</option>
+                    </select>
+                    <button id="submitButton">Get Stats</button>
+                  </form>
+                  <div id="statsContainer"></div>
+        </div>
+        </div>
+    </section>
+
+       <!-- Api Spotify-->
+       <section class="page-section bg-light" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">API Spotify</h2>
+                <h3 class="section-subheading text-muted">Usa-a para escolheres uma playlist conforme o teu estado de espírito</h3>
+            </div>
+            <label id="labelGenre">Enter a Genre:</label>
+            <form id="form"></form>
+            <div id="recommendedPlaylists"></div>
+            <br>
+            <div id="paginationBarContainer"></div>
+        </div>
+        
+    </section>
+
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Regions</h2>
+                    <h3 class="section-subheading text-muted">Escolhe uma região para saber mais sobre ela.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/bandopolis.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Bandle City</div>
+                                <div class="portfolio-caption-subheading text-muted">Corki, Lulu, Rumble e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Demacia</div>
+                                <div class="portfolio-caption-subheading text-muted">Fiora, Galio, Garen e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/freljord.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Freljord</div>
+                                <div class="portfolio-caption-subheading text-muted">Anivia, Ashe, Braum e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/ilhadassombras.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Shadow Isles</div>
+                                <div class="portfolio-caption-subheading text-muted">Elise, Gwen, Hecarim e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/iona.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Iona</div>
+                                <div class="portfolio-caption-subheading text-muted">Ahri, Akali, Irelia e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/ixtal.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ixtal</div>
+                                <div class="portfolio-caption-subheading text-muted">Zyra, Malphite, Neeko e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 7-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/noxus.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Noxus</div>
+                                <div class="portfolio-caption-subheading text-muted">Vladimir, Cassiopeia, Darius e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 8-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/oVazio.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">The Void</div>
+                                <div class="portfolio-caption-subheading text-muted">Vel'koz, Bel'veth, Cho'gath e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 9-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/piltover.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Piltover</div>
+                                <div class="portfolio-caption-subheading text-muted">Vi, Caitlyn, Camille e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 10-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/shurima.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Shurima</div>
+                                <div class="portfolio-caption-subheading text-muted">K'sante, Akshan, Amumu e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 11-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/targon.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Targon</div>
+                                <div class="portfolio-caption-subheading text-muted">Zoe, Aphelios, Aurelion Sol e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 12-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/zaun.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Zaun</div>
+                                <div class="portfolio-caption-subheading text-muted">Zeri, Blitzcrank, Dr. Mundo e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 13-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal13">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/aguasdesentina.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Bilgewater</div>
+                                <div class="portfolio-caption-subheading text-muted">Fizz, Gangplank, Graves e mais</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Sobre Mim</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <h4>Francisco Rodrigues</h4>
+                            <p class="text-muted">22319</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/francisco.rodrigues.37266" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Aluno de Engenharia da Computação Gráfica e Multimédia no Instituto Politécnico de Viana do Castelo</p></div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contacte-nos</h2>
+                   
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Nome *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Número telemóvel *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Mensagem *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar Mensagem</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; TW 2023</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Bandle City</h2>
+                                    <p class="item-intro text-muted">Corki, Lulu, Rumble e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/bandopolis.jpg" alt="..." />
+                                    <p>Há muita controvérsia sobre onde exatamente fica o lar dos yordles, embora vários mortais afirmem ter atravessado portais invisíveis para uma terra de estranho encantamento além do reino material. Falam de um lugar com magia ilimitada, onde os incautos, atraídos por uma infinidade de elementos fantásticos, podem acabar perdidos em um sonho sem volta.
+                                        <p>Em Bandópolis, dizem que todas as sensações são amplificadas para os não yordles. As cores são mais vívidas. A comida e a bebida embriagam os sentidos por anos e, uma vez provadas, jamais podem ser esquecidas. A luz do sol é eternamente dourada, as águas são completamente cristalinas e toda colheita é extremamente frutífera. Talvez alguns desses relatos sejam verdadeiros, mas talvez nenhum seja, pois não há duas pessoas neste mundo que concordem sobre o que realmente viram.</p>
+                                            Só uma coisa é certa: Bandópolis e seus habitantes carregam um poder atemporal. Isso deve explicar por que muitos mortais que encontram seu caminho de volta parecem ter envelhecido bruscamente, embora a maioria sequer retorne.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Demacia</h2>
+                                    <p class="item-intro text-muted">Fiora, Galio, Garen e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Em um reino imponente e legítimo com uma prestigiosa história militar, os habitantes de Demacia sempre colocaram os ideais de justiça, honra e dever acima de tudo, orgulhando-se intensamente de sua herança cultural. No entanto, apesar desses nobres princípios, essa grande nação autossuficiente foi se tornando cada vez mais fechada e isolacionista nos últimos séculos.</p>
+
+                                        <p>Hoje, Demacia é uma nação em crise.</p>
+                                        
+                                        <p>Sua capital, a Grande Cidade de Demacia, nasceu como um refúgio contra a feitiçaria após as Guerras Rúnicas, construída sobre a enigmática petricita – uma pedra branca peculiar que anula qualquer energia mágica. É de lá que a família real, desde muito tempo atrás, defende as cidades e vilas mais afastadas, as fazendas, as florestas e as montanhas ricas em recursos minerais.</p>
+                                        
+                                        <p>No entanto, após a morte súbita do rei Jarvan III, as outras famílias nobres ainda não aprovaram a sucessão de seu único herdeiro ao trono, o jovem príncipe Jarvan.</p>
+                                        
+                                        <p>Aqueles que vivem para além das fronteiras fortemente protegidas são cada vez mais vistos com desconfiança e, em uma época de tantas incertezas, muitos antigos aliados começaram a procurar proteção em outros lugares. Dizem por aí que a era dourada de Demacia já passou e, a menos que seu povo esteja disposto a se adaptar a um mundo em constante mudança – o que muitos julgam impossível –, a queda do reino será inevitável.</p>
+                                        
+                                        <p>Nem toda a petricita da região será capaz de proteger Demacia de si mesma.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Freljord</h2>
+                                    <p class="item-intro text-muted">Anivia, Ashe, Braum e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/freljord.jpg" alt="..." />
+                                    <p>Freljord é uma terra hostil e impiedosa, onde todos já nascem guerreiros para não perecer diante das adversidades.</p>
+
+                                        <p>Orgulhosas e muito independentes, as tribos locais são, muitas vezes, consideradas selvagens, rústicas e "nada civilizadas" por seus vizinhos de Valoran, que não conhecem as tradições milenares que as moldam. Há muitos milhares de anos, a aliança formada pelas irmãs Avarosa, Serylda e Lissandra foi rompida em uma guerra que ameaçou toda a região de Runeterra, lançando as terras nortenhas ao caos de um inverno quase constante. Agora, os únicos destinados (ou capacitados) a liderar são os mortais realmente excepcionais, resistentes aos estragos do fogo e do gelo.</p>
+                                        
+                                        <p>Apesar dos esforços dos Praeglacius, mitos e lendas sobre deuses antigos, yetis enigmáticos e irrequietos andarilhos espirituais ainda persistem. Os saqueadores dos Garra do Inverno avançam mais e mais a cada ano que passa, causando problemas ao sul de Demacia e às fronteiras de Noxus ao leste. Por fim, em busca de um futuro mais pacífico, tribos e clãs independentes começaram a oferecer vassalagem a Ashe, a jovem rainha dos avarosianos.</p>
+                                        
+                                        <p>Mesmo assim, há maus presságios à espreita. A guerra está voltando a Freljord, e ninguém tem esperança de escapar.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Shadow Isles</h2>
+                                    <p class="item-intro text-muted">Elise, Gwen, Hecarim e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ilhadassombras.jpg" alt="..." />
+                                    <p>Esta terra amaldiçoada já foi lar de uma civilização nobre e evoluída, sendo conhecida entre seus aliados como as Ilhas das Bênçãos. No entanto, mais de mil anos atrás, um cataclisma mágico sem precedentes estilhaçou a barreira entre os mundos material e espiritual, fundindo ambos... e aniquilando toda e qualquer forma de vida em um instante.</p>
+
+                                        <p>Agora, uma Névoa Negra maligna cobre as Ilhas permanentemente, e a própria terra do lugar encontra-se corrompida por uma magia sombria. Qualquer mortal que se aventure por esses litorais nefastos terá sua força vital lentamente drenada, o que, por sua vez, atrai os espíritos insaciáveis e atormentados dos mortos.</p>
+                                        
+                                        <p>Perecer dentro da névoa é estar condenado a assombrar este lugar medonho por toda a eternidade. Para piorar, o poder das Ilhas das Sombras parece se fortalecer a cada ano, permitindo que os espectros mais poderosos vagueiem cada vez mais longe por Runeterra.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">iona</h2>
+                                    <p class="item-intro text-muted">Ahri, Akali, Irelia e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/iona.jpg" alt="..." />
+                                    <p>Rodeada por águas traiçoeiras, Ionia é composta por várias províncias aliadas dispersas ao longo do arquipélago gigantesco conhecido por muitos como as Primeiras Terras. Como a cultura ioniana vem sendo moldada há muito tempo com base na busca pelo equilíbrio em todas as coisas, a fronteira entre os reinos material e espiritual tende a ser mais flexível por aqui, principalmente nas florestas e montanhas selvagens.</p>
+
+                                        <p>Embora os encantamentos deste lugar sejam instáveis e suas criaturas sejam mágicas e perigosas, a maioria dos ionianos conseguiu levar uma vida próspera aqui durante séculos. Os monastérios cheios de guerreiros, as milícias provinciais e até mesmo o próprio continente foram o suficiente para mantê-los protegidos.</p>
+                                        
+                                        <p>Mas essa calmaria terminou há doze anos, quando Noxus atacou as Primeiras Terras. As tropas do império, as quais pareciam não ter fim, invadiram Ionia e só foram derrotadas muitos anos depois, e com grandes custos.</p>
+                                        
+                                        <p>Agora, uma paz frágil paira sobre Ionia. Reações distintas à guerra acabaram dividindo a região – alguns grupos, como os monges Shojin e os Kinkou, procuram retornar ao isolamento pacífico e às tradições antigas. Já outras facções mais radicais, como a Irmandade Navori e a Ordem das Sombras, exigem a militarização da magia destas terras, a fim de criar uma nação unificada capaz de se vingar de Noxus.</p>
+                                        
+                                        <p>O destino de Ionia se sustenta sobre um equilíbrio delicado que alguns estão dispostos a desfazer, mas todos, sem exceção, estão irrequietos, sentindo a energia da mudança sob seus pés.</p>
+                                        
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Ixtal</h2>
+                                    <p class="item-intro text-muted">Zyra, Malphite, Neeko e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ixtal.jpg" alt="..." />
+                                    <p>Reconhecida por seu domínio da magia elemental, Ixtal foi uma das primeiras nações independentes que se uniram ao império shurimane. Na verdade, a cultura ixtalense é muito mais antiga, parte da grande diáspora ocidental que deu origem a civilizações como Buhru, a magnífica Helia e os ascetas de Targon. Além disso, é provável que tenham desempenhado um papel significativo na criação do primeiro Ascendente.</p>
+
+                                        <p>Os magos de Ixtal sobreviveram ao Vazio, e mais tarde aos Darkin, distanciando-se dos reinos vizinhos, servindo-se da vida selvagem ao redor como se fosse um escudo. Apesar de muito ter sido perdido, eles se comprometeram em preservar o pouco que restou...</p>
+                                        
+                                        <p>Agora, isolada na selva há milhares de anos, a sofisticada cidade arcológica de Ixaocan permanece praticamente livre de influências externas. Tendo testemunhado de longe a ruína das Ilhas das Bênçãos e as Guerras Rúnicas logo depois, os ixtalenses veem todas as outras facções de Runeterra como novatas e impostoras, e usam sua poderosa magia para manter qualquer intruso bem longe.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 7 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Noxus</h2>
+                                    <p class="item-intro text-muted">Vladimir, Cassiopeia, Darius e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/noxus.jpg" alt="..." />
+                                    <p>Noxus é um império poderoso com uma reputação temível. É visto como uma ameaça brutal e expansionista pelos estrangeiros, mas, por trás do exterior bélico, há uma sociedade surpreendentemente inclusiva que respeita e encoraja os talentos e as aptidões de cada indivíduo.</p>
+
+                                        <p>Os Noxii já foram uma tribo bárbara e violenta, até o momento em que invadiram a cidade antiga que, hoje em dia, fica no coração de seu domínio. Mesmo sob ameaças vindas de todos os lados, eles avançaram contra seus inimigos sem temor, expandindo o território ano a ano. A luta pela sobrevivência definiu o caráter dos noxianos modernos, um povo orgulhoso que valoriza a força acima de tudo — mas que sabe reconhecer que ela se manifesta de diversas formas.</p>
+                                        
+                                        <p>Qualquer um pode conquistar uma posição de poder e respeito dentro de Noxus se demonstrar a aptidão necessária, independentemente de classe social, antecedentes ou riquezas. Os indivíduos que sabem usar magia são muito respeitados, e costumam ser recrutados para que seus talentos especiais sejam aprimorados e postos a serviço do império.</p>
+                                        
+                                        <p>Entretanto, apesar dos ideais meritocráticos, as antigas famílias nobres ainda detêm grande poder... e há quem diga que a maior ameaça a Noxus não vem de fora, mas de dentro.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 8 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">The Void</h2>
+                                    <p class="item-intro text-muted">Vel'koz, Bel'veth, Cho'gath e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Ruidosamente lançado à existência com o surgimento do universo, o Vazio é uma manifestação da vastidão inatingível daquilo que jaz além. É uma força de apetite insaciável, que espera uma eternidade até que seus mestres, os misteriosos Observadores, marquem o momento final da destruição.</p>
+
+                                        <p>Quando um mortal é tocado por esse poder, ele vislumbra uma agonizante irrealidade eterna, que é o suficiente para estilhaçar até mesmo as mentes mais fortes. Os próprios habitantes do reino do Vazio são criaturas geradas, muitas vezes com pouquíssima consciência, mas incumbidas de um propósito peculiar: levar toda Runeterra ao oblívio.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 9 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Piltover</h2>
+                                    <p class="item-intro text-muted">Vi, Caitlyn, Camille e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/piltover.jpg" alt="..." />
+                                    <p>Piltover é uma cidade próspera e progressiva cujo poder e influência estão em crescimento. Ela é o centro cultural de Valoran, onde a arte, o artesanato, o comércio e a inovação andam de mãos dadas. Seu poder não vem de soberania militar, mas através dos motores do comércio e do pensamento de vanguarda. Situada no despenhadeiro acima do distrito de Zaun e de frente para o oceano, frotas de navios passam por seus portões do mar gigantescos, trazendo iguarias do mundo todo. A riqueza que isso gera deu lugar a um aumento sem precedentes no crescimento da cidade. Piltover se reinventou - e continua se reinventando - como uma cidade onde fortunas podem ser feitas e sonhos podem ser realizados. Os crescentes clãs de mercadores investiram no desenvolvimento dos empreendimentos mais incríveis: grandes loucuras artísticas, pesquisa hextec esotérica e monumentos arquitetônicos em seu poder. Como cada vez mais inventores estão se envolvendo com a história de hextec, Piltover se tornou um ímã para os artesãos mais habilidosos do mundo.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 10 modal popup--> 
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Shurima</h2>
+                                    <p class="item-intro text-muted">K'sante, Akshan, Amumu e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/shurima.jpg" alt="..." />
+                                    <p>Oimpério de Shurima já foi uma civilização próspera que ocupava um continente inteiro. Forjado pelos poderosos deuses-guerreiros do Batalhão de Ascendentes em uma era perdida, ele uniu todos os povos díspares do sul e consolidou uma paz duradoura entre eles.</p>
+
+                                        <p>Poucos ousavam se rebelar – e aqueles que o faziam, como a nação amaldiçoada de Icathia, eram esmagados sem misericórdia.</p>
+                                        
+                                        <p>Entretanto, após milhares de anos de crescimento e prosperidade, a Ascensão fracassada do último imperador de Shurima deixou a capital em ruínas, e as histórias da antiga glória do império se tornaram pouco mais do que mitos. Agora, a maioria dos habitantes nômades dos desertos de Shurima lutam para conseguir se sustentar nesta terra impiedosa. Alguns grupos construíram pequenos postos para defender os raros oásis, enquanto outros mergulham em catacumbas há muito perdidas em busca das incontáveis fortunas que dizem estar aguardando lá embaixo. Também há quem leve uma vida de mercenário, trocando serviços por moedas antes de desaparecer de novo na vastidão sem lei.</p>
+                                        
+                                        <p>Mesmo assim, alguns ainda ousam sonhar com o retorno dos tempos antigos. Recentemente, as tribos andaram se agitando, fomentadas pelos sussurros vindos do coração do deserto sobre o retorno do imperador Azir, que os levará a uma nova era de maravilhas.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 11 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Targon</h2>
+                                    <p class="item-intro text-muted">Zoe, Aphelios, Aurelion Sol e mais.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/targon.jpg" alt="..." />
+                                    <p>OMonte Targon é a mais imponente montanha de Runeterra; uma torre gigantesca de rochas endurecidas pelo sol em meio a uma variedade de cumes. Nada igual em escala em qualquer lugar do mundo. Localizado longe da civilização, o Monte Targon é deveras remoto e impossível de alcançar, exceto pelos exploradores mais determinados. Muitas lendas estão ligadas ao Monte Targon e, assim como qualquer lugar que pertence a um mito, é um farol para sonhadores, loucos e exploradores em busca de aventura. Algumas almas corajosas tentam escalar a montanha impossível, talvez em busca de conhecimento ou iluminação, ou talvez atrás de glória ou para atender outro desejo da alma ao ver seu auge. A subida é quase impossível, e até mesmo para aqueles poucos que, de alguma forma, sobrevivem a chegada ao topo jamais falam sobre o que viram lá. Alguns voltam com uma assombração de olhares vazios em seus olhos, outros mudam completamente, imbuídos de um Aspecto de poder sobrenatural e que vai além da humanidade, com um destino que poucos mortais podem compreender.
+
+                                    </p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 12 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Zaun</h2>
+                                    <p class="item-intro text-muted">Zeri, Blitzcrank, Dr. Mundo e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/zaun.jpg" alt="..." />
+                                    <p>Zaun é um grande distrito subterrâneo, aos pés de cânions profundos e vales que cortam Piltover. A pouca luz que chega lá é filtrada pelas fumaças que saem dos emaranhados de canos corroídos e refletem do vidro manchado de sua arquitetura industrial. Zaun e Piltover já foram unidas, mas agora são sociedades simbióticas, mas separadas. Apesar de existir no crepúsculo perpétuo da poluição, Zaun prospera com seu povo vibrante e sua rica cultura. A riqueza de Piltover permitiu que Zaun se desenvolvesse em paralelo; um espelho escuro da cidade acima. Muitas das mercadorias que chegam a Piltover acabam entrando no mercado clandestino de Zaun, e os inventores hextec que consideram que as restrições impostas na cidade acima são muito rígidas descobrem que suas pesquisas perigosas são bem-vindas em Zaun. O desenvolvimento desenfreado de tecnologias voláteis e da indústria imprudente fez com que as extensões de Zaun ficassem poluídas e perigosas. Correntes de derramamento tóxico estagnaram nas partes mais baixas da cidade, mas mesmo aqui as pessoas encontram maneiras de existir e prosperar.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Portfolio item 13 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Bilgewater</h2>
+                                    <p class="item-intro text-muted">Fizz, Gangplank, Graves e mais</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/bandopolis.jpg" alt="..." />
+                                    <p>Situada no arquipélago das Ilhas da Chama Azul, Águas de Sentina é uma cidade portuária sem igual, cheia de mercenários, gangues das docas e contrabandistas do mundo inteiro. Aqui, fortunas crescem e ambições desmoronam em um piscar de olhos. É uma cidade de recomeços para quem está fugindo da justiça, de dívidas ou de perseguições, já que nestas ruas tortuosas ninguém se importa com o seu passado. Mesmo assim, a cada manhã, corpos de viajantes descuidados são encontrados flutuando no mar perto das docas, com os bolsos vazios e suas gargantas cortadas...</p>
+
+                                        <p>Embora seja perigosíssima, Águas de Sentina fervilha com novas oportunidades, já que não é limitada pelas amarras de um governo formal e regulações de mercado. Quem tem dinheiro pode comprar quase tudo aqui, desde itens hextec proibidos até a lealdade de um senhor do crime.</p>
+                                        
+                                        <p>Com a destituição do último "rei dos ladrões", Águas de Sentina entrou em um período de transição enquanto os capitães mais proeminentes tentam chegar a um acordo sobre o futuro da cidade. Mas, havendo navios em condições de navegar e homens dispostos a tripulá-los, Águas de Sentina continuará sendo um dos lugares mais peculiares e bem relacionados de Runeterra.</p>
+                                   
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Fechar Região 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONSUMIR API -->
+        <script src="js/script_api.js"></script>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
